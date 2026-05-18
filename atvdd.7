@@ -1,0 +1,11 @@
+import pandas as pd
+
+# Carregando os dados (nossa planilha de produtos)
+df = pd.read_csv("produtos.csv")
+
+# Comando chave: df[df["Coluna"] > Valor]
+# Aqui pedimos apenas os produtos com Preco acima de 100
+produtos_caros = df[df["Preco"] > 100]
+
+print("--- Produtos que custam mais de R$ 100 ---")
+print(produtos_caros)
